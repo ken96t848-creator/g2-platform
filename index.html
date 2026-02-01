@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G2 | MAKE SUCCESS SUSTAINABLE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;700;900&display=swap');
+        
+        :root {
+            --bg: #FAF9F6;
+            --black: #121212;
+            --blue: #2563EB;
+            --white: #FFFFFF;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Archivo', sans-serif;
+            background-color: var(--bg);
+            color: var(--black);
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        .neo-border {
+            border: 3px solid var(--black);
+        }
+
+        .neo-shadow {
+            box-shadow: 6px 6px 0px 0px var(--black);
+        }
+
+        .neo-shadow-blue {
+            box-shadow: 6px 6px 0px 0px var(--blue);
+        }
+
+        .neo-button {
+            border: 3px solid var(--black);
+            box-shadow: 4px 4px 0px 0px var(--black);
+            transition: all 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+        }
+
+        .neo-button:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px 0px var(--black);
+        }
+
+        .neo-button:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px var(--black);
+        }
+
+        .heading-brutal {
+            font-family: 'Archivo Black', sans-serif;
+            text-transform: uppercase;
+            line-height: 0.9;
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100vw;
+            background: var(--black);
+            color: var(--white);
+            padding: 15px 0;
+            border-top: 3px solid var(--black);
+            border-bottom: 3px solid var(--black);
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+            font-size: 10vw;
+            font-family: 'Archivo Black', sans-serif;
+            text-transform: uppercase;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            background: var(--blue);
+            border: 2px solid var(--black);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: normal;
+            transition: transform 0.15s ease-out, width 0.3s, height 0.3s, background-color 0.3s;
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        ::selection {
+            background-color: var(--blue);
+            color: var(--white);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
