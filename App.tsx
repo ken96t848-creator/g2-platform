@@ -13,6 +13,7 @@ import CompanyPage from './pages/CompanyPage';
 import VisionPage from './pages/VisionPage';
 import GuidePage from './pages/GuidePage';
 import Preloader from './components/Preloader';
+import TopActionHeader from './components/TopActionHeader';
 
 type View = 'home' | 'company' | 'vision' | 'guide';
 
@@ -57,7 +58,6 @@ const App: React.FC = () => {
     window.addEventListener('mouseover', handleMouseOver);
     window.addEventListener('scroll', handleScroll);
 
-    // Intersection Observer for fade-in animations
     const observerOptions = {
       threshold: 0.15,
       rootMargin: '0px 0px -50px 0px'
@@ -93,18 +93,10 @@ const App: React.FC = () => {
 
   const navigateTo = (view: View) => {
     if (view === currentView) return;
-    
     setIsTransitioning(true);
-    
-    // カーテンが完全に閉まりきるまで待つ (400ms transition + a little buffer)
     setTimeout(() => {
-      // 瞬時にトップへ移動（CSSのsmooth scrollが無効なので即座に移動する）
       window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-      
-      // コンテンツの切り替え
       setCurrentView(view);
-      
-      // 少し待ってからカーテンを開ける
       setTimeout(() => {
         setIsTransitioning(false);
       }, 150);
@@ -161,6 +153,7 @@ const App: React.FC = () => {
       
       {!isLoading && (
         <>
+          <TopActionHeader onActionClick={openModal} />
           <Navbar onJoinClick={openModal} onNavigate={navigateTo} currentView={currentView} />
           
           <main className={`${isTransitioning ? 'opacity-0' : 'opacity-100'} transition-opacity duration-200 relative z-10`}>

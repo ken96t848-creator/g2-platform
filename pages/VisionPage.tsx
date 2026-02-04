@@ -3,7 +3,7 @@ import React from 'react';
 
 const VisionPage: React.FC = () => {
   return (
-    <div className="pt-32 pb-24 bg-[var(--bg)]">
+    <div className="pt-48 md:pt-64 pb-24 bg-[var(--bg)]">
       {/* Manifesto Hero */}
       <section className="px-6 md:px-10 mb-32">
         <div className="fade-in-up visible">
@@ -28,8 +28,7 @@ const VisionPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* The 3 Pillars Section */}
+      {/* ... (rest of the content remains the same) */}
       <section className="px-6 md:px-10 mb-40">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
@@ -68,17 +67,12 @@ const VisionPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Evolution Section: The Digital Globe */}
+      {/* Evolution Section */}
       <section className="bg-black text-white py-32 md:py-64 overflow-hidden relative border-b-4 border-black">
-        {/* Background Grid */}
         <div className="absolute inset-0 earth-grid opacity-20 pointer-events-none"></div>
-        
-        {/* Glowing Background Core */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] glow-sphere animate-pulse-glow pointer-events-none"></div>
-
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            
             <div className="order-2 lg:order-1">
               <div className="inline-block px-4 py-1 bg-white text-black neo-border mb-6 font-black text-[10px] uppercase tracking-widest">
                 Global Infrastructure
@@ -87,7 +81,6 @@ const VisionPage: React.FC = () => {
                 CONNECTING<br />
                 <span className="text-[var(--blue)]">PURE VALUE.</span>
               </h2>
-              
               <div className="space-y-12">
                 {[
                   { label: "NOW / THE CHAOS", desc: "分断されたデータ。不透明な計測。短期的な搾取。業界に蔓延するノイズを私たちが一掃します。" },
@@ -100,28 +93,18 @@ const VisionPage: React.FC = () => {
                 ))}
               </div>
             </div>
-
-            {/* THE DYNAMIC GLOBE VISUAL */}
             <div className="relative order-1 lg:order-2 flex justify-center items-center h-[500px] md:h-[700px]">
               <div className="absolute w-[350px] md:w-[550px] h-[350px] md:h-[550px] border-2 border-white/10 rounded-full animate-rotate-slow">
                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-white neo-border"></div>
               </div>
-              
               <div className="absolute w-[280px] md:w-[450px] h-[280px] md:h-[450px] border border-[var(--blue)]/30 rounded-full animate-rotate-fast">
                  <div className="absolute bottom-0 right-1/2 translate-x-1/2 translate-y-1/2 w-3 h-3 bg-[var(--blue)] neo-border"></div>
               </div>
-
               <div className="relative w-[220px] md:w-[350px] h-[220px] md:h-[350px] neo-border border-white bg-black neo-shadow-blue rounded-full overflow-hidden flex justify-center items-center">
                 <svg viewBox="0 0 100 100" className="w-full h-full opacity-60">
                    <circle cx="50" cy="50" r="48" fill="none" stroke="white" strokeWidth="0.2" />
                    {[...Array(8)].map((_, i) => (
-                     <ellipse 
-                       key={i} 
-                       cx="50" cy="50" rx={10 + i * 5} ry="48" 
-                       fill="none" stroke="white" strokeWidth="0.1" 
-                       className="animate-rotate-slow" 
-                       style={{ animationDuration: `${20 + i * 2}s` }}
-                     />
+                     <ellipse key={i} cx="50" cy="50" rx={10 + i * 5} ry="48" fill="none" stroke="white" strokeWidth="0.1" className="animate-rotate-slow" style={{ animationDuration: `${20 + i * 2}s` }} />
                    ))}
                 </svg>
                 <div className="absolute w-20 h-20 bg-[var(--blue)] rounded-full blur-3xl animate-pulse-glow opacity-50"></div>
@@ -129,27 +112,11 @@ const VisionPage: React.FC = () => {
                    <div className="text-4xl md:text-6xl font-black heading-brutal italic text-white tracking-tighter">G2</div>
                 </div>
               </div>
-
-              {[...Array(5)].map((_, i) => (
-                <div 
-                  key={i} 
-                  className="absolute bg-white text-black px-3 py-1 neo-border text-[8px] font-black uppercase tracking-widest animate-bounce"
-                  style={{ 
-                    top: `${20 + i * 15}%`, 
-                    left: `${i % 2 === 0 ? 10 : 80}%`,
-                    animationDelay: `${i * 0.5}s`
-                  }}
-                >
-                  {["Success", "Growth", "Trust", "Data", "Node"][i]}
-                </div>
-              ))}
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* RESTORED: BECOME A PARTNER SECTION */}
       <section className="py-24 md:py-48 px-6 md:px-10 bg-[var(--blue)] text-white text-center border-b-4 border-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="w-full h-full earth-grid"></div>
@@ -167,8 +134,6 @@ const VisionPage: React.FC = () => {
           </button>
         </div>
       </section>
-
-      {/* Decorative Padding */}
       <div className="py-20 bg-[var(--bg)]"></div>
     </div>
   );

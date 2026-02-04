@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-[#FFDE03] text-black neo-border-t-0 lg:neo-border-t-3 lg:neo-border-l-0 neo-border px-8 py-6 flex flex-col justify-center min-w-[280px] lg:w-[380px] relative overflow-hidden">
+          <div className="bg-[#FFDE03] text-black lg:neo-border-l-0 neo-border px-8 py-6 flex flex-col justify-center min-w-[280px] lg:w-[380px] relative overflow-hidden">
              <div className="absolute left-0 top-0 bottom-0 bg-black/10" style={{ width: `${progress}%` }}></div>
              <div className="relative z-10 flex justify-between items-center gap-4 font-black">
                <span className="text-xs md:text-sm font-mono truncate bg-black text-[#FFDE03] px-2 py-0.5">{sysCode}</span>

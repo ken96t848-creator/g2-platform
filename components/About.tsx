@@ -8,15 +8,16 @@ const About: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-16 md:gap-32 items-start">
           
           <div className="lg:w-1/2 fade-in-up">
-            <h2 className="heading-brutal text-6xl md:text-8xl lg:text-9xl mb-12 leading-none italic">
-              価値を、<br /><span className="text-[var(--blue)]">解読する。</span>
+            <h2 className="heading-brutal text-6xl md:text-7xl lg:text-8xl mb-12 leading-none italic">
+              価値を、<br /><span className="text-[var(--blue)] whitespace-nowrap">解読する。</span>
             </h2>
-            <div className="max-w-md">
+            <div className="max-w-2xl">
               <p className="text-xl md:text-3xl font-black leading-tight mb-8">
-                成果は一度きりの数字ではなく、<br className="hidden md:block" />
-                積み上がるべき「資産」である。
+                <span className="md:whitespace-nowrap block md:inline">成果は一度きりの数字ではなく、</span>
+                <br className="hidden md:block" />
+                <span className="md:whitespace-nowrap block md:inline">積み上がるべき「資産」である。</span>
               </p>
-              <p className="text-base md:text-lg font-bold text-gray-400 leading-relaxed italic">
+              <p className="text-base md:text-lg font-bold text-gray-400 leading-relaxed italic max-w-md">
                 私たちは、表面的な数字の向こう側にある「信頼の質量」を計測します。
                 G2は、広告主とパートナーが真の共栄を目指すための、最も透明度の高い舞台です。
               </p>

@@ -3,7 +3,7 @@ import React from 'react';
 
 const GuidePage: React.FC = () => {
   return (
-    <div className="pt-32 pb-24 bg-[var(--bg)]">
+    <div className="pt-48 md:pt-64 pb-24 bg-[var(--bg)]">
       {/* Page Hero */}
       <section className="px-6 md:px-10 mb-20 md:mb-32 overflow-hidden">
         <div className="fade-in-up visible">
@@ -26,8 +26,7 @@ const GuidePage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Main Definition Section */}
+      {/* ... (rest of the content remains the same) */}
       <section className="px-6 md:px-10 mb-32">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -65,12 +64,10 @@ const GuidePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Platforms Section */}
       <section className="px-6 md:px-10 mb-32 bg-black py-24 md:py-40 text-white relative overflow-hidden">
         <div className="absolute inset-0 earth-grid opacity-10 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="heading-brutal text-4xl md:text-7xl mb-16 italic text-center">POST ON <span className="text-[var(--blue)]">ANYWHERE.</span></h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {[
               {
@@ -103,37 +100,8 @@ const GuidePage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Success Steps */}
-      <section className="px-6 md:px-10 mb-40">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
-             <h2 className="heading-brutal text-4xl md:text-6xl italic leading-none">THE ROAD TO<br />SUCCESS.</h2>
-             <span className="text-[10px] font-black tracking-[0.5em] opacity-30 uppercase mb-2">Workflow Standard</span>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            {[
-              { step: '01', title: 'REGISTRATION', desc: 'G2へのパートナー登録。審査を経てシステムへアクセス。' },
-              { step: '02', title: 'SELECT OFFER', desc: '自身の媒体に最適な高単価案件をセレクト。' },
-              { step: '03', title: 'PROMOTION', desc: 'コンテンツ作成・広告運用を開始。' },
-              { step: '04', title: 'EARN REWARD', desc: '発生した成果に基づき、正確に報酬を受け取る。' }
-            ].map((item, i) => (
-              <div key={i} className="bg-white neo-border p-8 relative group overflow-hidden">
-                <div className="absolute -right-4 -bottom-4 text-9xl font-black heading-brutal opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">{item.step}</div>
-                <div className="heading-brutal text-[var(--blue)] text-3xl mb-4 italic">{item.step}</div>
-                <h4 className="font-black text-lg mb-4 uppercase">{item.title}</h4>
-                <p className="font-bold text-sm opacity-50 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Marquee Decoration */}
       <div className="marquee-container -rotate-2">
         <div className="marquee-content text-[15vw] md:text-[8vw]">
-          &nbsp;AFFILIATE MARKETING * PERFORMANCE BASED ADVERTISING * G2 GUIDE *&nbsp;
           &nbsp;AFFILIATE MARKETING * PERFORMANCE BASED ADVERTISING * G2 GUIDE *&nbsp;
         </div>
       </div>

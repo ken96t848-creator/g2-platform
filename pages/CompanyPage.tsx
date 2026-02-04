@@ -12,7 +12,7 @@ const CompanyPage: React.FC = () => {
   ];
 
   return (
-    <div className="pt-32 pb-24 bg-[var(--bg)]">
+    <div className="pt-48 md:pt-64 pb-24 bg-[var(--bg)]">
       {/* Page Hero */}
       <section className="px-6 md:px-10 mb-20 md:mb-32 overflow-hidden">
         <div className="fade-in-up visible">
