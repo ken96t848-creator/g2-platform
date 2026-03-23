@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
             <div>
               <p className="text-[9px] opacity-30 mb-6 font-black tracking-[0.5em] uppercase">お問い合わせ</p>
               <div className="flex items-center gap-3 mb-2">
-                <p className="hover:text-[var(--blue)] transition-colors cursor-pointer">06-XXXX-XXXX</p>
+                <p className="opacity-60">電話：現在準備中</p>
               </div>
               <p className="hover:text-[var(--blue)] transition-colors cursor-pointer">info@g2-platform.com</p>
             </div>
